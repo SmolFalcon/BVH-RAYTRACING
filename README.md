@@ -14,5 +14,10 @@ Main scene demostrating the features implemented, like rough multiple bounce ref
 Scene with complex translucent geometry
 
 <br/><br/><br/>
+<img width="1254" height="623" alt="Captura de pantalla 2026-01-19 144930" src="https://github.com/user-attachments/assets/ab120836-1f0b-4b33-847b-b9be322f7473" />
+Scene showcasing shadow casting from a point light source with multi-sample softness
+
+
+<br/><br/><br/>
 <img width="391" height="259" alt="Captura de pantalla 2026-01-19 144406" src="https://github.com/user-attachments/assets/39255c96-7eee-4ebc-aacb-434005684895" /><br/>
 Simple console status print during render
