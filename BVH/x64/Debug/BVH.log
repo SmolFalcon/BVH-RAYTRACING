@@ -1,0 +1,319 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  D:\Desktop\BVH\BVH\BVH>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\include" -I"C:\dev\vcpkg\installed\x64-windows\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\include"  -G   --keep-dir x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o D:\Desktop\BVH\BVH\BVH\x64\Debug\kernel.cu.obj "D:\Desktop\BVH\BVH\BVH\kernel.cu" 
+D:\Desktop\BVH\BVH\BVH\pfUtils.cuh(21): warning #940-D: missing return statement at end of non-void function "pfVec::operator[]"
+        }
+        ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+D:\Desktop\BVH\BVH\BVH\pfUtils.cuh(97): warning #940-D: missing return statement at end of non-void function "pfMatrix::operator[]"
+        }
+        ^
+  
+D:\Desktop\BVH\BVH\BVH\pfUtils.cuh(125): warning #836-D: returning reference to local variable
+            return out;
+                   ^
+  
+D:\Desktop\BVH\BVH\BVH\pfUtils.cuh(178): warning #461-D: initial value of reference to non-const must be an lvalue
+        n = cross(pTri.c - pTri.b, pTri.a - pTri.b);
+                  ^
+  
+D:\Desktop\BVH\BVH\BVH\pfUtils.cuh(178): warning #461-D: initial value of reference to non-const must be an lvalue
+        n = cross(pTri.c - pTri.b, pTri.a - pTri.b);
+                                   ^
+  
+D:\Desktop\BVH\BVH\BVH\pfBVH.cuh(168): warning #174-D: expression has no effect
+            node.aabbMin; node.aabbMin.x = 1e30f; node.aabbMin.y = 1e30f; node.aabbMin.z = 1e30f;
+            ^
+  
+D:\Desktop\BVH\BVH\BVH\pfBVH.cuh(169): warning #174-D: expression has no effect
+            node.aabbMax; node.aabbMax.x = -1e30f; node.aabbMax.y = -1e30f; node.aabbMax.z = -1e30f;
+            ^
+  
+D:\Desktop\BVH\BVH\BVH\pfBVH.cuh(316): warning #461-D: initial value of reference to non-const must be an lvalue
+                pRay.hit.barycoords = baryCoords(pTri, pRay.origin + pRay.direction * pRay.t);
+                                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(47): warning #461-D: initial value of reference to non-const must be an lvalue
+            if (lR.t > getNorm(lR.origin - light)) 
+                               ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(510): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(514): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(517): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(522): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(525): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(530): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(533): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(538): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(541): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(546): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(549): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\pfUtils.cuh(21): warning #940-D: missing return statement at end of non-void function "pfVec::operator[]"
+        }
+        ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+D:\Desktop\BVH\BVH\BVH\pfUtils.cuh(97): warning #940-D: missing return statement at end of non-void function "pfMatrix::operator[]"
+        }
+        ^
+  
+D:\Desktop\BVH\BVH\BVH\pfUtils.cuh(125): warning #836-D: returning reference to local variable
+            return out;
+                   ^
+  
+D:\Desktop\BVH\BVH\BVH\pfUtils.cuh(178): warning #461-D: initial value of reference to non-const must be an lvalue
+        n = cross(pTri.c - pTri.b, pTri.a - pTri.b);
+                  ^
+  
+D:\Desktop\BVH\BVH\BVH\pfUtils.cuh(178): warning #461-D: initial value of reference to non-const must be an lvalue
+        n = cross(pTri.c - pTri.b, pTri.a - pTri.b);
+                                   ^
+  
+D:\Desktop\BVH\BVH\BVH\pfUtils.cuh(295): warning #177-D: variable "idx" was declared but never referenced
+        int idx = y + x * gridDim.y;
+            ^
+  
+D:\Desktop\BVH\BVH\BVH\pfBVH.cuh(168): warning #174-D: expression has no effect
+            node.aabbMin; node.aabbMin.x = 1e30f; node.aabbMin.y = 1e30f; node.aabbMin.z = 1e30f;
+            ^
+  
+D:\Desktop\BVH\BVH\BVH\pfBVH.cuh(169): warning #174-D: expression has no effect
+            node.aabbMax; node.aabbMax.x = -1e30f; node.aabbMax.y = -1e30f; node.aabbMax.z = -1e30f;
+            ^
+  
+D:\Desktop\BVH\BVH\BVH\pfBVH.cuh(316): warning #461-D: initial value of reference to non-const must be an lvalue
+                pRay.hit.barycoords = baryCoords(pTri, pRay.origin + pRay.direction * pRay.t);
+                                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\stb_image.h(4276): warning #550-D: variable "old_limit" was set but never used
+       unsigned int cur, limit, old_limit;
+                                ^
+  
+D:\Desktop\BVH\BVH\BVH\stb_image.h(5185): warning #550-D: variable "idata_limit_old" was set but never used
+                   stbi__uint32 idata_limit_old = idata_limit;
+                                ^
+  
+D:\Desktop\BVH\BVH\BVH\stb_image.h(6972): warning #550-D: variable "out_size" was set but never used
+          int out_size = 0;
+              ^
+  
+D:\Desktop\BVH\BVH\BVH\stb_image.h(6973): warning #550-D: variable "delays_size" was set but never used
+          int delays_size = 0;
+              ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(47): warning #461-D: initial value of reference to non-const must be an lvalue
+            if (lR.t > getNorm(lR.origin - light)) 
+                               ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(18): warning #177-D: variable "lightIntensity" was declared but never referenced
+        float lightIntensity = 25000;
+              ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(135): warning #940-D: missing return statement at end of non-void function "getSpecular"
+    }
+    ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(221): warning #177-D: variable "light" was declared but never referenced
+            pfVec light = { 65,135,-120 };
+                  ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(343): warning #177-D: variable "initNormal" was declared but never referenced
+            pfVec initNormal = pRays[rayIdx].hit.shadingNormal;
+                  ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(510): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(514): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(517): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(522): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(525): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(530): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(533): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(538): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(541): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(546): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+D:\Desktop\BVH\BVH\BVH\kernel.cu(549): warning #546-D: transfer of control bypasses initialization of:
+              variable "xThreads" (declared at line 554)
+              variable "yThreads" (declared at line 555)
+              variable "xBlocks" (declared at line 557)
+              variable "yBlocks" (declared at line 558)
+        if (cudaStatus != cudaSuccess) goto Error;
+                                       ^
+  
+CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+  kernel.cu
+  tmpxft_00006c30_00000000-7_kernel.cudafe1.cpp
+D:\Desktop\BVH\BVH\BVH\pfBVH.cuh(296): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Desktop\BVH\BVH\BVH\pfImage.h(91): warning C4244: '=': conversión de 'float' a '_Ty'; posible pérdida de datos
+          with
+          [
+              _Ty=unsigned char
+          ]
+D:\Desktop\BVH\BVH\BVH\pfImage.h(92): warning C4244: '=': conversión de 'float' a '_Ty'; posible pérdida de datos
+          with
+          [
+              _Ty=unsigned char
+          ]
+D:\Desktop\BVH\BVH\BVH\pfImage.h(93): warning C4244: '=': conversión de 'float' a '_Ty'; posible pérdida de datos
+          with
+          [
+              _Ty=unsigned char
+          ]
+D:\Desktop\BVH\BVH\BVH\pfImage.h(142): warning C4244: '=': conversión de 'float' a '_Ty'; posible pérdida de datos
+          with
+          [
+              _Ty=unsigned char
+          ]
+D:\Desktop\BVH\BVH\BVH\pfUtils.cuh(21): warning C4715: 'pfVec::operator[]': no todas las rutas de acceso de control devuelven un valor
+  BVH.vcxproj -> D:\Desktop\BVH\BVH\x64\Debug\BVH.exe
+  "pwsh.exe" no se reconoce como un comando interno o externo,
+  programa o archivo por lotes ejecutable.
