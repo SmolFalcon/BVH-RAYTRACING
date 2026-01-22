@@ -4,6 +4,7 @@
 
 #define PI 3.14159265358979323f
 #define INF 1e30f
+#define uint unsigned int
 
 
 struct pfVec
@@ -279,6 +280,7 @@ __device__ pfVec snellsLaw(const pfVec& inDir, const pfVec& pN, const float inIO
 }
 
 
+///*
 __device__ float sampleNoise(const int& pSample)
 {
     //https://github.com/covexp/cuda-noise/tree/master
@@ -308,6 +310,82 @@ __device__ pfVec randomHemisphereVector(const pfVec& pN, const float& rand1, con
     // Flip the vector if it's not in the same hemisphere as the normal
     return (dot(randomVec, pN) > 0.0f) ? randomVec : randomVec * -1.0f;
 }
+//*/
+
+__device__ __forceinline__ uint wangHash(uint& seed)
+{
+    seed = (seed ^ 61u) ^ (seed >> 16);
+    seed *= 9u;
+    seed = seed ^ (seed >> 4);
+    seed *= 0x27d4eb2du;
+    seed = seed ^ (seed >> 15);
+    return seed;
+}
+
+__device__ __forceinline__ float rand01(uint& seed)
+{
+    return wangHash(seed) * (1.0f / 4294967296.0f);
+}
+
+__device__ __forceinline__ pfVec cosineHemisphereSample(float u1, float u2)
+{
+    float r = sqrtf(u1);
+    float theta = 2.0f * PI * u2;
+
+    float x = r * cosf(theta);
+    float y = r * sinf(theta);
+    float z = sqrtf(1.0f - u1);
+
+    return pfVec{ x, y, z };
+}
+
+__device__ __forceinline__ void buildOrthonormalBasis(
+    const pfVec& n,
+    pfVec& t,
+    pfVec& b
+)
+{
+    if (fabs(n.z) < 0.999f)
+    {
+        t = cross(pfVec{ 0, 0, 1 }, n); normalize(t);
+    }
+    else
+    { 
+        t = cross(pfVec{ 0, 1, 0 }, n); normalize(t);
+    }
+
+    b = cross(n, t);
+}
+
+__device__ pfVec randomCosineHemisphereVector(
+    const pfVec& normal,
+    uint pixelIdx,
+    uint bounce,
+    uint pass
+)
+{
+    uint seed = pixelIdx * 9781u + bounce * 6271u + pass * 15731u;
+
+    float u1 = rand01(seed);
+    float u2 = rand01(seed);
+
+    pfVec local = cosineHemisphereSample(u1, u2);
+
+    pfVec t, b;
+    buildOrthonormalBasis(normal, t, b);
+
+    pfVec out = t * local.x + b * local.y + normal * local.z;
+
+	normalize(out);
+
+    return out;
+}
+
+
+
+
+
+
 
 
 __device__ float orenNayarBRDF(const pfVec& pN, const pfVec& pToLight, const pfVec& pToView, float pRoughness)

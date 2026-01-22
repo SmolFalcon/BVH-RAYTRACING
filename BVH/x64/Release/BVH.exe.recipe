@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\Desktop\BVH\Raytracing\x64\Release\BVH.exe</FullPath>
+      <FullPath>D:\Desktop\BVH-RAYTRACING\x64\Release\BVH.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
